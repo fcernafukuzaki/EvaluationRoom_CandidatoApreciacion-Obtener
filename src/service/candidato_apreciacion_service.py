@@ -59,7 +59,7 @@ class CandidatoApreciacionService():
             return True, response['Items'], lista_idreclutador, 200
 
     def asignar_nombre_reclutadores(self, respuesta, lista_reclutador):
-        if len(lista_reclutador) == 0:
+        if lista_reclutador is None or len(lista_reclutador) == 0:
             print('Lista de reclutadores vacía.')
             return respuesta
 
